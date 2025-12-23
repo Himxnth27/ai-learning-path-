@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Path Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">AI.PATH</div>
+        <nav>
+            <!-- Future nav items -->
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="hero">
+            <h1 class="hero-title">Master Your Future</h1>
+            <p class="hero-subtitle">Personalized computer science learning paths powered by advanced AI. Tell us your
+                goal, and we'll map the journey.</p>
+
+            <div id="input-section" class="input-section">
+                <form id="generator-form">
+                    <div class="form-group">
+                        <label for="username">Name</label>
+                        <input type="text" id="username" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="focus-area">Focus Area</label>
+                        <select id="focus-area">
+                            <option value="web-development">Full Stack Web Development</option>
+                            <option value="dsa">Data Structures & Algorithms</option>
+                            <option value="artificial-intelligence">Artificial Intelligence & ML</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="cyber-security">Cyber Security</option>
+                            <option value="mobile-dev">Mobile App Development</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Current Level</label>
+                        <select id="experience">
+                            <option value="beginner">Beginner (No experience)</option>
+                            <option value="intermediate">Intermediate (Some projects)</option>
+                            <option value="advanced">Advanced (Professional)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Generate My Path ✨</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="dashboard" class="hidden">
+            <div class="path-header">
+                <h2>Your Personalized Roadmap</h2>
+                <p id="user-greeting" style="color: var(--text-secondary); margin-top: 0.5rem;"></p>
+
+                <!-- Happy Learning / Welfare Element -->
+                <div class="quote-container">
+                    "Learning is the only thing the mind never exhausts, never fears, and never regrets."
+                </div>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+                    <button id="reset-btn"
+                        style="background: transparent; border: 1px solid var(--text-secondary); color: var(--text-secondary); padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Start
+                        New Path</button>
+                </div>
+            </div>
+
+            <div id="loading" class="hidden loading-container">
+                <div class="spinner"></div>
+                <p>Analyzing skills gap... Generating modules...</p>
+            </div>
+
+            <div id="timeline-container" class="timeline">
+                <!-- Dynamic content will happen here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

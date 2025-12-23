@@ -1,0 +1,5 @@
+node_modules/
+learning_path.db
+.DS_Store
+*.java
+*.class
