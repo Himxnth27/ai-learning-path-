@@ -50,6 +50,30 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
+    // GSAP
+    gsap.registerPlugin(SplitText);
+    const subtitle = new SplitText('.hero-subtitle', { type: 'words' });
+    
+    gsap.timeline()
+    .from('.hero-title', {
+        y: 200,
+        autoAlpha: 0,
+        duration: 1,
+        stagger: { each: 0.05 },
+        ease: "power2"
+    })
+    .from(subtitle.words, {
+        y: 200,
+        autoAlpha: 0,
+        stagger: 0.05,
+        ease: "power2"
+    })
+    .from('.form-group', {
+        xPercent: -200,
+        stagger: 0.05,
+        ease: 'sine.inOut'
+    })
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -58,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const experience = document.getElementById('experience').value;
 
         // Transition UI
-        heroSection.classList.add('hidden');
+        heroSection.style.display = 'none';
         dashboardSection.classList.remove('hidden');
         loadingElement.classList.remove('hidden');
         timelineContainer.innerHTML = ''; // Clear previous
@@ -67,14 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Simulate AI Processing Delay
         setTimeout(() => {
-            loadingElement.classList.add('hidden');
+            loadingElement.style.display = 'none';
             generatePath(focusArea, experience);
-        }, 2000);
+        }, 3000);
     });
 
     resetBtn.addEventListener('click', () => {
         dashboardSection.classList.add('hidden');
-        heroSection.classList.remove('hidden');
+        heroSection.style.display = 'flex';
+        loadingElement.style.display = '';
         form.reset();
     });
 

@@ -13,7 +13,7 @@
     --text-primary: #ffffff;
     --text-secondary: #a0a0b0;
     --glass-border: 1px solid rgba(255, 255, 255, 0.1);
-    --font-main: 'Inter', sans-serif;
+    --font-main: 'PT Sans', sans-serif;
 }
 
 body {
@@ -57,13 +57,18 @@ h3 {
     letter-spacing: -0.02em;
 }
 
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .hero-title {
     font-size: 3.5rem;
     background: linear-gradient(to right, #fff, #b3b3b3);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
     line-height: 1.1;
 }
 
@@ -71,7 +76,6 @@ h3 {
     color: var(--text-secondary);
     font-size: 1.25rem;
     max-width: 600px;
-    margin: 0 auto 2.5rem;
 }
 
 /* Layout Core */
@@ -91,6 +95,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    max-height: 5vh;
     border-bottom: var(--glass-border);
 }
 
@@ -112,7 +117,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4rem 1rem;
 }
 
 /* Form Section */
@@ -124,9 +128,9 @@ main {
     backdrop-filter: blur(20px);
     width: 100%;
     max-width: 500px;
-    margin-top: 2rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .input-section:hover {
@@ -177,6 +181,7 @@ option {
     border: none;
     border-radius: 10px;
     color: white;
+    font-family: 'Delius', cursive;
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
@@ -190,6 +195,7 @@ option {
 
 /* Dashboard Generated View */
 #dashboard {
+    margin-top: 2rem;
     width: 100%;
     max-width: 900px;
 }

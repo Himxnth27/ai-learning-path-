@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Learning Path Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="logo">AI.PATH</div>
+        <div class="logo">DESIGN YOUR PATH</div>
         <nav>
             <!-- Future nav items -->
         </nav>
@@ -19,9 +22,11 @@
 
     <main id="main-content">
         <section id="hero">
-            <h1 class="hero-title">Master Your Future</h1>
-            <p class="hero-subtitle">Personalized computer science learning paths powered by advanced AI. Tell us your
-                goal, and we'll map the journey.</p>
+            <div>
+                <h1 class="hero-title">Master Your Future</h1>
+                <p class="hero-subtitle">Personalized computer science learning paths powered by advanced AI. Tell us your
+                    goal, and we'll map the journey.</p>
+            </div>
 
             <div id="input-section" class="input-section">
                 <form id="generator-form">
@@ -84,6 +89,8 @@
         </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <script src="script.js"></script>
 </body>
 
